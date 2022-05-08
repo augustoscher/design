@@ -17,12 +17,12 @@ gulp.task('webserver', function() {
 
 
 gulp.task('css', function () {
-    var processors = [
-        cssnext({browsers: ['last 2 version']}),
-        autoprefixer({ browsers: ['last 20 versions']}),
-        cssnano(),
-    ];
-    return gulp.src('./lassediercks.css')
-        .pipe(postcss(processors))
-        .pipe(gulp.dest('./dist'));
+  var processors = [
+    cssnext({browsers: ['last 2 version']}),
+    autoprefixer({ browsers: ['last 20 versions']}),
+    cssnano(),
+  ];
+  return gulp.src('./lassediercks.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./dist'));
 });
